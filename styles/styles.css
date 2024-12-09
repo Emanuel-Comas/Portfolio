@@ -12,6 +12,7 @@ nav{
     background-color: rgb(0, 0, 0);
     flex-wrap: wrap;
     justify-content: end;
+    padding-top: 10px;
 }
 
 nav ul{
@@ -57,6 +58,7 @@ nav a:hover{
     text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Efecto de sombra simple */
     text-align: center;
     color: white;
+    padding-top: 50px;
 }
 
 .main h2{
@@ -106,6 +108,7 @@ nav a:hover{
     text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Efecto de sombra simple */
     text-align: center;
     color: white;
+    padding-top: 50px;
     margin-bottom: 150px;
 }
 
