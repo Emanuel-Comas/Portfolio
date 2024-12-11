@@ -234,6 +234,13 @@ nav a:hover{
     max-width: 100px;
     max-height: 100px;
     margin: 5px;
+    filter: grayscale(150%);
+}
+
+.caja-contact img:hover{
+    filter: grayscale(0%);
+    /*Agrega una transicion de 0.3s al cambiar a color*/
+    transition: filter 0.3s ease-in-out;
 }
 
 .Contact a{
