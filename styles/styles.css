@@ -39,11 +39,9 @@ nav a:hover{
 .main{
     display: block;
     flex-wrap: wrap;
-    background-image: url(https://wallpapers.com/images/hd/4k-programming-blue-screen-72ooade6j20ndoor.jpg);
-    background-repeat: no-repeat;
+    background: url(https://wallpapers.com/images/hd/4k-programming-blue-screen-72ooade6j20ndoor.jpg) no-repeat;
     background-attachment: fixed;
     height: 442px;
-    /*background-color: rgb(10, 10, 10);*/
     padding-top: 100px;
     padding-bottom: 160px;
 }
