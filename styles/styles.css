@@ -38,8 +38,7 @@ nav a:hover{
 /*Home*/
 .main{
     display: block;
-    flex-wrap: wrap;
-    background: url('/images/Wallpaper_datos.jpg') no-repeat;
+    background: url('../images/Wallpaper_datos.jpg') no-repeat;
     background-attachment: fixed;
     height: 442px;
     padding-top: 100px;
