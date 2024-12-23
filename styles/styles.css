@@ -131,8 +131,10 @@ nav a:hover{
 /*Projects*/
 
 .Projects{
-    background: url('../images/Projects_portfolio.jpg') no-repeat;
+    background: url('../images/Projects_portfolio.jpg') no-repeat center;
+    background-size: cover;
     display: block;
+    background-attachment: fixed;
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
     height: 705px;
