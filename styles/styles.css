@@ -86,8 +86,7 @@ nav a:hover{
 /*Skills*/
 
 .Skills{
-    background-image: url(https://images.unsplash.com/photo-1607799279861-4dd421887fb3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbWFjaW9ufGVufDB8fDB8fHww);
-    background-repeat: no-repeat;
+    background: url('../images/Skills_portfolio.jpg') no-repeat;
     display: block;
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
@@ -132,8 +131,7 @@ nav a:hover{
 /*Projects*/
 
 .Projects{
-    background-image: url(https://plus.unsplash.com/premium_photo-1678565999332-1cde462f7b24?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHl0aG9uJTIwcHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D);
-    background-repeat: no-repeat;
+    background: url('../images/Projects_portfolio.jpg') no-repeat;
     display: block;
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
@@ -194,7 +192,7 @@ nav a:hover{
 /*Contact*/
 
 .Contact{
-    background-image: url(https://wallpapers.com/images/hd/4k-programming-background-hf2tfvpgw83ibtpz.jpg);
+    background: url('../images/Contact_portfolio.jpg') no-repeat;
     background-repeat: no-repeat;
     display: block;
     justify-content: center; /* Centra los elementos horizontalmente */
