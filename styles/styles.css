@@ -139,7 +139,7 @@ nav a:hover{
     align-items: center; /* Centra los elementos verticalmente */
     height: 705px;
     /*Cada qeu se agreguen proyectos, se debe estirar el padding-bottom*/
-    padding-bottom: 250px;
+    padding-bottom: 400px;
 }
 
 .Projects h1{
