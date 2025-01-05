@@ -276,4 +276,5 @@ nav a:hover{
     background-color: chartreuse;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 5px 5px 5px whitesmoke;
+    transition: .4s;
 }
