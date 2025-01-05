@@ -137,9 +137,9 @@ nav a:hover{
     background-attachment: fixed;
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
-    height: 705px;
-    /*Cada qeu se agreguen proyectos, se debe estirar el padding-bottom*/
-    padding-bottom: 500px;
+    height: auto;
+    /*Cada que se agreguen proyectos, se debe estirar el padding-bottom*/
+    padding-bottom: 160px;
 }
 
 .Projects h1{
