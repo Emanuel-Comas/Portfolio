@@ -40,7 +40,7 @@ nav a:hover{
     display: block;
     background: url('../images/Wallpaper_datos.jpg') no-repeat;
     background-attachment: fixed;
-    height: 442px;
+    height: auto;
     padding-top: 100px;
     padding-bottom: 160px;
 }
@@ -90,8 +90,9 @@ nav a:hover{
     display: block;
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
-    height: 705px;
+    height: auto;
     padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .Skills h1{
