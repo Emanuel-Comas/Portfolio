@@ -190,6 +190,15 @@ nav a:hover{
     margin: 50px;
 }
 
+/* Clase efecto */
+.efecto{
+    transition: all 0.3s ease;
+}
+
+.efecto:hover{
+    transform: translatey(-15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 
 /*Contact*/
