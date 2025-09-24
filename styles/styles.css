@@ -13,6 +13,8 @@ nav{
     flex-wrap: wrap;
     justify-content: end;
     padding-top: 10px;
+    /* Asi evito que las cajas de projects choquen con el nav. */
+    z-index: 9999;
 }
 
 nav ul{
