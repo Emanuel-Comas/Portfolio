@@ -1,5 +1,5 @@
 {
-    "extends": "style-config-recommended",
+    "extends": "stylelint-config-recommended",
     "rules": {
         "color-no-invalid-hex": true,
         "declaration-block-no-duplicate-properties":true
