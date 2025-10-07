@@ -101,33 +101,33 @@ decryptBtn.addEventListener('click', () => {
     btnWrapper.remove();
 
     // Estado inicial.
-    smallState.textContent = 'Conectando…';
-    statusLine.textContent = 'Estableciendo canal seguro...';
+    smallState.textContent = 'Connecting...';
+    statusLine.textContent = 'Establishing secure channel...';
 
     // Animación de descifrado.
     let dots = 0;
     statusLine.dataset.interval = setInterval(() => {
     dots = (dots + 1) % 4;
-    statusLine.textContent = 'Descifrando' + '.'.repeat(dots);
+    statusLine.textContent = 'Deciphering wired' + '.'.repeat(dots);
     }, 400);
 
     // Proceso simulado, tras 1.6s, revela enlaces.
     // Puedes ajustar tiempos si quieres otro ritmo.
     setTimeout(() => {
-        smallState.textContent = 'Descifrado parcial';
-        statusLine.textContent = 'Verificando integridad...';
+        smallState.textContent = 'Partial decryption';
+        statusLine.textContent = 'Verifying integrity...';
     }, 1200);
 
     setTimeout(() => {
-        smallState.textContent = 'Procesando claves';
-        statusLine.textContent = 'Reensamblando metadatos...';
+        smallState.textContent = 'Processing keys';
+        statusLine.textContent = 'Reassembling metadata...';
     }, 2400);
 
     setTimeout(() => {
         // Final: detiene animación y muestra enlaces.
         clearInterval(statusLine.dataset.interval);
-        smallState.textContent = 'Acceso concedido';
-        statusLine.textContent = 'Enlaces recuperados con éxito.';
+        smallState.textContent = 'Access granted';
+        statusLine.textContent = 'Links successfully retrieved.';
         // Revela los links.
         linksArea.classList.remove('visually-hidden');
         // Añade un pequeño highlight. 
