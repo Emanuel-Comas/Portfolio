@@ -283,7 +283,8 @@ section.Projects{
     /* Fuerza salto de liena automatico. */
     white-space: pre-wrap;
     /* Rompe palabras largas si es necesario. */
-    word-break: break-word;
+    overflow-wrap: break-word;
+    word-break: normal;
     margin: 0;
     max-width: 100%;
     overflow: hidden;
