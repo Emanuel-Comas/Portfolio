@@ -83,20 +83,20 @@ nav.wired-nav li {
 
 /* Modificación de h1 */
 .main h1 {
-    font-size: 100px;
-    margin-top: -120px;
+    font-size: clamp(2rem, 8vw, 5rem);
+    margin-top: -0;
     text-shadow: 2px 2px 5px #cfdbdb;
 }
 
 /* Modificación de h2 */
 .main h2 {
-    margin-bottom: 100px;
-    font-size: 50px;
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
 }
 
 /* Modificación de p */
 .main p {
-    font-size: 30px;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     max-width: 900px;
     margin: 0 auto;
 }
@@ -426,37 +426,46 @@ section.Projects{
 }
 
 
-/* Ajustes para mobile */
+/* Ajustes nav mobile */
 @media (max-width: 576px) {
-    .main {
-        padding-top: 100px !important;
-        padding-bottom: 50px !important;
-    }
-
-    .main h1 {
-        font-size: 40px !important;
-        margin-top: 0 !important;
-    }
-
-    .main h2 {
-        font-size: 24px !important;
-        margin-bottom: 30px !important;
-    }
-
-    .main p {
-        font-size: 16px !important;
-        max-width: 90% !important;
-        margin: 0 auto !important;
+    nav.wired-nav {
+        padding: 1rem 0;
+        background: #0a0a0a;
+        border-bottom: 1px dashed #00fff7;
     }
 
     nav.wired-nav ul {
-        flex-direction: column !important;
-        gap: 1rem !important;
-        padding: 0 !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0;
+        padding: 0.5rem;
     }
 
-    nav.wired-nav li {
-        margin-top: 0 !important;
-        text-align: center;
+    nav.wired-nav a {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .main {
+        padding-top: 140px !important; /* Para compensar el nav fixed */
+        padding-bottom: 60px;
+    }
+
+    .main h1 {
+        font-size: 40px;
+        margin-top: 0;
+    }
+
+    .main h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .main p {
+        font-size: 16px;
+        max-width: 90%;
+        margin: 0 auto;
     }
 }
