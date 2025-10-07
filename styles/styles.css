@@ -1,291 +1,426 @@
-*{
+/* Variables cpn colores asignadas, luego las se usan en al sección contact. */
+
+:root{
+    --bg: #06090b;
+    --neon: #33ffcc;
+    --accent: #66e0ff;
+    --muted: #9aa0a6;
+}
+
+body {
+    background-color: #0a0a0a !important;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00fff7;
     margin: 0;
     padding: 0;
 }
 
-/* nav*/
-nav{
-    display: flex;
-    position: fixed;
-    height: 50px;
+/* Modificación del nav. */
+nav.wired-nav {
+    border-bottom: 1px dashed #00fff7;
+    padding: 1rem 0;
+    /* Fondo para nav. */
+    background: #0a0a0a;
     width: 100%;
-    background-color: rgb(0, 0, 0);
-    flex-wrap: wrap;
-    justify-content: end;
-    padding-top: 10px;
-    /* Asi evito que las cajas de projects choquen con el nav. */
-    z-index: 9999;
+    position: fixed;
+    z-index: 1000;
+    /* Hace que el nav quede arriba */
+    top: 0;
 }
 
-nav ul{
+/* Modificación nav ul. */
+nav.wired-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    list-style-type: none;
-    margin-right: 10px;
-    padding-top: 10px;
-}
-
-nav a{
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-right: 30px;
-    color: white;
-}
-
-nav a:hover{
-    color: green;
-}
-
-
-/*Home*/
-.main{
-    display: block;
-    background: url('../images/Wallpaper_datos.jpg') no-repeat;
-    background-attachment: fixed;
-    height: auto;
-    padding-top: 100px;
-    padding-bottom: 240px;
-}
-
-.main h1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    font-size: 90px;
-    font-family: sans-serif;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Efecto de sombra simple */
-    text-align: center;
-    color: white;
-    padding-top: 50px;
-}
-
-.main h2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    color: white;
-}
-
-.main p{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    font-size: 30px;
-    font-family: monospace;
-    text-align: center;
-    color: white;
-    margin-top: 100px;
-}
-
-
-/*Skills*/
-
-.Skills{
-    background: url('../images/Skills_portfolio.jpg') no-repeat;
-    display: block;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    height: auto;
-    padding-top: 50px;
-    padding-bottom: 220px;
-}
-
-.Skills h1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    font-size: 90px;
-    font-family: sans-serif;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Efecto de sombra simple */
-    text-align: center;
-    color: white;
-    padding-top: 50px;
-    margin-bottom: 150px;
-}
-
-.img-skills{
-    background-color: rgb(56, 56, 56);
-    display: flex;
-    /*flex-wrap: wrap;
-    flex-direction: row;*/
-    flex-flow: row wrap;
-    width: 80%;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    border: 10px solid rgb(67, 68, 67);
+    gap: 2.5rem;
 }
 
-.img-skills img{
-    max-width: 100px;
-    max-height: 100px;
-    margin: 5px;
-}
-
-
-/*Projects*/
-
-.Projects{
-    background: url('../images/Projects_portfolio.jpg') no-repeat center;
-    background-size: cover;
-    display: block;
-    background-attachment: fixed;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    height: auto;
-    /*Cada que se agreguen proyectos, se debe estirar el padding-bottom*/
-    padding-bottom: 160px;
-}
-
-.Projects h1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    font-size: 90px;
-    font-family: sans-serif;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Efecto de sombra simple */
-    text-align: center;
-    color: white;
-    padding-top: 100px;
-    margin-bottom: 150px;
-}
-
-.cajas-projects{
-    background-color: rgb(56, 56, 56);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    border: 10px solid rgb(67, 68, 67);
-}
-
-.cajas-projects a{
-    color: white;
+nav.wired-nav a{
+    color: #00fff7;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    font-size: 1rem;
 }
 
-.cajas-projects a:hover{
-    color: aqua;
+nav.wired-nav a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00fff7;
+    bottom: -4px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
 }
 
-.cajas-projects h3{
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    font-size: 30px;
-    font-family: monospace;
-    text-align: center;
-    max-width: 100px;
-    max-height: 100px;
-    margin: 50px;
+nav.wired-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
-/* Clase efecto */
-.efecto{
-    transition: all 0.3s ease;
+nav.wired-nav a:hover {
+    color: #0ff;
 }
 
-.efecto:hover{
-    transform: translatey(-15px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+nav.wired-nav li {
+    margin-top: 10px;
 }
 
-
-/*Contact*/
-
-.Contact{
-    background: url('../images/Contact_portfolio.jpg') no-repeat;
-    background-repeat: no-repeat;
-    display: block;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    height: auto;
+/* modificación del home. */
+.main {
+    color: #00fff7;
+    padding-top: 300px;
     padding-bottom: 100px;
+    font-family: monospace;
 }
 
-.Contact h1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    font-size: 90px;
-    font-family: sans-serif;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Efecto de sombra simple */
-    text-align: center;
-    color: white;
-    padding-top: 100px;
-    margin-bottom: 150px;
+/* Modificación de h1 */
+.main h1 {
+    font-size: 100px;
+    margin-top: -120px;
+    text-shadow: 2px 2px 5px #cfdbdb;
 }
 
-.caja-contact{
-    background-color: rgb(56, 56, 56);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    border: 10px solid rgb(67, 68, 67);
+/* Modificación de h2 */
+.main h2 {
+    margin-bottom: 100px;
+    font-size: 50px;
 }
 
-.caja-contact img{
-    max-width: 100px;
-    max-height: 100px;
-    margin: 5px;
-    filter: grayscale(150%);
-}
-
-.caja-contact img:hover{
-    filter: grayscale(0%);
-    /*Agrega una transicion de 0.3s al cambiar a color*/
-    transition: filter 0.3s ease-in-out;
-}
-
-.Contact a{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    text-decoration: none;
-}
-
-/*Descarga del CV*/
-
-.Download-CV{
-    color: black;
+/* Modificación de p */
+.main p {
     font-size: 30px;
-    margin: auto;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.button-CV{
-    display: flex;
-    background-color: #3BA4C7;
+
+
+
+/* Sección Skills. */
+
+.Skills {
+    /* Fondo negro de 'seccion'. */
+    background-color: #000;
+    color: #00fff7;
+    font-family: monospace;
+    position: relative;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    border-top: 1px dashed #00fff7;
+    border-bottom: 1px dashed #00fff7;
+}
+
+.Skills h1 {
+    font-size: 80px;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+#Title-skills {
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+#Tittle-skills::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #00fff7;
+    bottom: -10px;
+    left: 0;
+    opacity: 0.7;
+    filter: blur(2.5px);
+    border-radius: 2px;
+}
+
+
+/* Icon skill. */
+.skill-icon {
+    /* Fuerza el tamaño, sino bootstrap lo bloquea. */
+    width: 90px !important;
+    height: 90px !important;
+    border: 1px dashed #00fff7;
+    border-radius: 8px;
+    padding: 8px;
+    filter: drop-shadow(0 0 5px #00fff7);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: default;
+    object-fit: contain;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1) rotate(-3deg);
+    filter: drop-shadow(0 0 10px #0ff);
+    border-color: #0ff;
+}
+
+/* Responsive para mobile. */
+@media (max-width: 576px) {
+    #tittle-skills {
+        font-size: 1.8rem;
+    }
+    
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+}
+    
+    
+
+
+/* Sección projects. */
+
+section.Projects{
+    min-height: 100vh;
+    padding-top: 150px !important;
+}
+
+.projectList{
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Modificación de scrollbar */
+#projectsList::-webkit-scrollbar {
+    width: 10px;
+    background: #0ff;
+    box-shadow: 0 0 15px #0ff;
+}
+
+
+#projectsList::-webkit-scrollbar-track {
+    background: #111;
+}
+
+#projectsList::-webkit-scrollbar-thumb {
+    /* Neón. */
+    background: #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+
+.Projects h2 {
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 120px;
-    height: 40px;
-    margin: auto;
-    margin-top: 30px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 20px;
+    font-size: 80px;
+    margin-top: -10px;
+    margin-bottom: 60px !important;
 }
 
-.button-CV:hover{
-    background-color: chartreuse;
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: 5px 5px 5px whitesmoke;
-    transition: .4s;
+.project-description {
+    color: #66fff0;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Modifica las card */
+.card {
+    width: 60%;
+    max-width: 900px;
+    margin:  0 auto;
+}
+
+.project-card {
+    background-color: rgba(0, 255, 204, 0.1);
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+    
+.project-card:hover {
+    background-color: rgba(0, 255, 204, 0.2);
+    transform: scale(1.02);
+    /* Para que no choque y desaparezca la linea de arriba de los proyectos. */
+    margin-top: 1px;
+}
+
+/* Clase personalizada para los laterales del container de cards. */
+.projects-container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.decryptionWall{
+    font-family: monospace;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+    
+.decryption-wall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.95);
+    font-family: monospace;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    line-height: 1.5;
+    /* transición para opacity */
+    transition: opacity 0.2s ease;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.decryption-wall.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.text-neon-cyan {
+    color: #00ffcc !important;
+    text-shadow: 
+    0 0 1px #00ffcc,
+    0 0 2px #00ffcc,
+    0 0 2px #00ffcc;
+}
+
+
+/* Animación para ocultar el descencriptado de Lain. */
+.fade-out {
+    from {opacity: 1;}
+    to {opacity: 0; visibility: hidden;}
+}
+
+
+
+/* Sección contact. */
+
+/* Titulo. */
+.Title-contact {
+    /* Azul neón de la variable en 'root' definida a principio del css. */
+    color: var(--accent);
+    text-shadow: 0 0 4px rgba(102,224,255,0.3);
+    margin-bottom: 1.5rem;
+    font-size: 80px !important;
+}
+
+/* Arreglo color de la palabra 'email'. */
+.email {
+    color:var(--accent);
+}
+
+.center-wrap{
+    /* Para separar un poco la sección 'contact' de 'projects'. */
+    background-color: rgba(0,0, 0, 0.85) !important;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+}
+
+.card-lain{
+    width:100%;
+    max-width:720px;
+    background:rgba(0,0,0,0.45);
+    border:1px solid rgba(233, 227, 217, 0.06);
+    border-radius:12px;
+    padding:1.6rem;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* Scanlines + grid. */
+.card-lain::before{
+    content:"";position:absolute;inset:0;background-image:
+    linear-gradient(transparent 49%, rgba(0,255,180,0.02) 50%),
+    linear-gradient(90deg, transparent 49%, rgba(0,255,180,0.015) 50%);
+    background-size:100% 6px, 6px 100%;pointer-events:none;mix-blend-mode:screen;opacity:0.06;
+}
+
+.scanlines{
+    position:absolute;
+    inset:0;
+    background-image:linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.06) 51%);
+    background-size:100% 4px;
+    opacity:0.22;
+    pointer-events:none
+}
+
+.glitch{
+    font-size:36px;
+    color:var(--accent);
+    position:relative;
+    display:inline-block;
+    mix-blend-mode:screen;
+}
+
+
+.glitch::before,.glitch::after{
+    content:attr(data-text);
+    position:absolute;
+    left:0;top:0;
+    color:var(--neon);
+    overflow:hidden;
+}
+
+
+.glitch::before{
+    clip-path:polygon(0 0,100% 0,100% 50%,0 50%);
+    opacity:.9;
+    transform:translate(-2px,-1px)
+}
+
+
+.glitch::after{
+    clip-path:polygon(0 50%,100% 50%,100% 100%,0 100%);
+    opacity:.7;
+    transform:translate(2px,2px)
+}
+
+
+.lead-muted{color:var(--muted)}
+
+/* Status line. */
+.status-line{
+    font-size:0.9rem;
+    color:var(--muted);
+    min-height:1.2rem
+}
+
+/* Links style. */
+.protected-links a{
+    display:block;color:var(--accent);text-decoration:none;padding:.35rem .5rem;border-radius:6px;
+    border:1px solid rgba(102,224,255,0.06);background:rgba(255,255,255,0.015);
+    margin-bottom:.5rem;
+}
+
+.protected-links a:hover{
+    /* Opacidad '0.14', de la caja que contiene los links al pasar el mouse.*/
+    background:rgba(102,224,255,0.14);
+    text-decoration:none;
+    color: var(--neon);
+}
+
+@media (max-width:576px){
+    /* Cambia el color de las letras al pasar el mouse. */
+    .glitch{font-size:28px}
+
 }
