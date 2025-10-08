@@ -43,6 +43,7 @@ startGlitch();
 const decryptionText = document.getElementById('decryptionText');
 const wall = document.getElementById('decryptionWall');
 const projects = document.getElementById('projectsList');
+// En caso de poner Audio.
 // const audio = document.getElementById('wiredAudio');
 
 const finalMessage = `
@@ -112,7 +113,7 @@ decryptBtn.addEventListener('click', () => {
     }, 400);
 
     // Proceso simulado, tras 1.6s, revela enlaces.
-    // Puedes ajustar tiempos si quieres otro ritmo.
+    // Ajustes de tiempo, si se necesita otro ritmo.
     setTimeout(() => {
         smallState.textContent = 'Partial decryption';
         statusLine.textContent = 'Verifying integrity...';
