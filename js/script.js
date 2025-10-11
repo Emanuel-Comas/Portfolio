@@ -97,7 +97,7 @@ const linksArea = document.getElementById('linksArea');
 
 // Simulación de proceso de descencriptado.
 decryptBtn.addEventListener('click', () => {
-    //   Hace desaparecer el boton inmedaitamente.
+    //   Hace desaparecer el boton inmediatamente.
     //   remove(), para eliminar del DOM.
     btnWrapper.remove();
 
@@ -110,20 +110,25 @@ decryptBtn.addEventListener('click', () => {
     statusLine.dataset.interval = setInterval(() => {
     dots = (dots + 1) % 4;
     statusLine.textContent = 'Deciphering wired' + '.'.repeat(dots);
-    }, 400);
+    // '.' cada 0.2 segundos.
+    // 200ms => 0.2 segundos.
+    }, 200);
 
     // Proceso simulado, tras 1.6s, revela enlaces.
     // Ajustes de tiempo, si se necesita otro ritmo.
     setTimeout(() => {
         smallState.textContent = 'Partial decryption';
         statusLine.textContent = 'Verifying integrity...';
-    }, 1200);
+        // 600ms => 0.6 segundos.
+    }, 600);
 
     setTimeout(() => {
         smallState.textContent = 'Processing keys';
         statusLine.textContent = 'Reassembling metadata...';
-    }, 2400);
+        // 1200ms => 1.2 segundos.
+    }, 1200);
 
+    // Este bloque se ejecuta a los 2 segundos.
     setTimeout(() => {
         // Final: detiene animación y muestra enlaces.
         clearInterval(statusLine.dataset.interval);
@@ -133,6 +138,7 @@ decryptBtn.addEventListener('click', () => {
         linksArea.classList.remove('visually-hidden');
         // Añade un pequeño highlight. 
         linksArea.animate([{opacity:0, transform:'translateY(6px)'},{opacity:1, transform:'translateY(0)'}], {duration:600, easing:'cubic-bezier(.2,.9,.3,1)'});
-    }, 3600);
+        // 2000 ms =>  2.0 segundos.
+    }, 2000);
 
 });
