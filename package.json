@@ -1,0 +1,15 @@
+{
+    "name": "Portfolio",
+    "version": "1.2.0",
+    "scripts": {
+        "lint:html": "htmlhint **/*.html",
+        "lint:css": "stylelint **/*.css",
+        "lint:js": "eslint **/*.js",
+        "lint:all": "npm run lint:html && npm run lint:css && npm run lint:js"
+    },
+    "devDependencies": {
+        "eslint": "^9.37.0",
+        "htmlhint": "^1.7.1",
+        "stylelint-config-recommended": "^17.0.0"
+    }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Monospace font -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Nav de la pagina. -->
+    <nav class="wired-nav">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección home. -->
+    <section class="main text-center" id="Home">
+        <h1 id="glitch-name">Emanuel Comas</h1>
+        <h2>Python Developer</h2>
+        <p id="main_text">
+            Python developer, web development, with interests in AI, machine learning, cybersecurity, and among other
+            things.
+        </p>
+    </section>
+
+    <!-- Sección skills -->
+    <section class="Skills" id="Skills">
+        <div class="container text-center text-info font-monospace">
+            <h1 id="Tittle-skills" class="fw-semibold">Skills</h1>
+            <div class="row justify-content-center g-3">
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Python" src="https://img.icons8.com/?size=512&id=13441&format=png" alt="Python"
+                        title="Python" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Html" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="Html" title="Html"
+                        class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Css" src="https://cdn-icons-png.freepik.com/512/732/732190.png" alt="Css" title="Css"
+                        class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Javascript" src="https://logospng.org/download/javascript/logo-javascript-icon-256.png"
+                        alt="Javascript" title="Javascript" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Xampp"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMb6jK5Yyd1nAWolpFJeaGKKSwIunHBywz8A&s"
+                        alt="Xampp" title="Xampp" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Data-Science" src="https://cdn-icons-png.flaticon.com/512/4824/4824797.png"
+                        alt="Data-Science" title="Data-Science" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Git"
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-git-icon-svg-download-png-225996.png"
+                        alt="Git" title="Git" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="GitHub" src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="GitHub"
+                        title="GitHub" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="Kali-linux"
+                        src="https://icons.iconarchive.com/icons/simpleicons-team/simple/256/kali-linux-icon.png"
+                        alt="Kali-linux" title="Kali-linux" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="docker"
+                        src="https://www.applivery.com/wp-content/uploads/2024/07/Docker-Desktop.png"
+                        alt="docker" title="docker" class="skill-icon mx-auto d-block">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
+                    <img id="node"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+                        alt="node" title="node" class="skill-icon mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sección de proyectos. -->
+    <section id="Projects" class="Projects position-relative text-info py-5 d-flex flex-column align-items-center"
+        style="height: 50vh; overflow: hidden;">
+        <!-- Muro de descifrado. -->
+        <div id="decryptionWall"
+            class="decryption-wall position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+            style="background: rgba(0,0,0,0.95);z-index: 10;">
+            <pre id="decryptionText" class=" m-0"></pre>
+        </div>
+
+        <!-- Projects list. -->
+        <h2 class="mb-4 text-center">🌐 Projects</h2>
+        <div id="projectsList" class="projects-container d-none" style="max-height: 80vh; overflow-y: auto;">
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Currency_service" target="_blank">Currency service</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Microservicio simple hecho en 'Python' y 'Flask', que convierte montos entre monedas diferentes.</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Script_Eliminar_Json" target="_blank">Script eliminar
+                        Json</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Script para eliminar archvos JSON.</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/BorazuwarahCTF" target="_blank">Borazuwarah CTF</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Documentación sobre ataque CTF en un laboratorio.</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Wikipedia_Web_Scrapping" target="_blank">Wikipedia Web
+                        Scrapping</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Script para extraer información de sitio web.</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/loginApp" target="_blank">Login App</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">App login hecho con Tkinter</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Api_de_noticias" target="_blank">API de noticias</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Api de noticias, extrae y muestra noticias del dia actual</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/MonitoreadorDirectorio" target="_blank">Script de
+                        monitoreo</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Script qie vigila un directorio, al haber algún cambio lo
+                    informa</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Portscanner" target="_blank">Portscanner</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Escaner de puertos activos, al encontrar alguno lo cierra</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Maquina_vulnerable" target="_blank">Vulnerable machine</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Documentación de ataque a una maquina vulnerable.</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Script_to_copy_video_files." target="_blank">Copy video
+                        files</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Script para copiar archivos de videos de varios formatos.</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Generador_de_mapa" target="_blank">Generador de mapa</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Genera un mapa según latitud y longitud pasadas por el
+                    usuario</p>
+            </div>
+
+            <div class="card bg-transparent border border-info mb-3 p-3 project-card" style="cursor:pointer;">
+                <h4 class="text-center text-neon-cyan mb-1">
+                    <a href="https://github.com/Emanuel-Comas/Analista_CyberSOC_1" target="_blank">Formación SOC 1</a>
+                </h4>
+                <!-- Descripción del proyecto. -->
+                <p class="project-description text-center">Documentación sobre mi formación en SOC 1.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Sección contact. -->
+    <section class="center-wrap" id="Contact">
+        <div class="container text-center mb-4">
+            <h1 class="Title-contact display-5 fw-bold text-info">Contact</h1>
+        </div>
+
+        <div class="card-lain">
+
+            <div class="d-flex align-items-center justify-content-between mb-2">
+                <div>
+                    <div class="glitch" data-text="ENCRYPTED">ENCRYPTED</div>
+                    <h5 class="mt-2 mb-0" style="color:var(--neon)">Contact information</h5>
+                    <div class="lead-muted small">Access protected / Wired</div>
+                </div>
+                <div class="text-end">
+                    <small class="lead-muted">Estado: <span id="smallState">Offline</span></small>
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(102,224,255,0.04)">
+
+            <div class="row g-3">
+
+                <div class="col-md-7">
+                    <!-- Mi correo. -->
+                    <div class="email p-3"
+                        style="background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border-radius:8px;border:1px solid rgba(255,255,255,0.02)">
+                        <p class="mb-1"><strong>Email:</strong> <span class="lead-muted">emanuelcomas96@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5 d-flex flex-column justify-content-between">
+                    <!-- Boton que desaparece cuando se clickea. -->
+                    <div>
+                        <div id="btnWrapper" class="d-grid mb-2">
+                            <button id="decryptBtn" class="btn btn-outline-success btn-lg" type="button"
+                                aria-live="polite">
+                                🔐 Desencriptar enlaces
+                            </button>
+                        </div>
+
+                        <div class="status-line" id="statusLine">Esperando acción...</div>
+                    </div>
+
+                    <div class="mt-2">
+                        <div id="linksArea" class="protected-links visually-hidden">
+                            <!-- URLs -->
+                            <a id="linkedinLink" href="https://www.linkedin.com/in/emanuel-comas-402923217/"
+                                target="_blank" rel="noopener">LinkedIn — /emanuel-comas</a>
+                            <a id="githubLink" href="https://github.com/Emanuel-Comas" target="_blank"
+                                rel="noopener">GitHub — /Emanuel-Comas</a>
+                            <a id="cvLink"
+                                href="https://drive.google.com/file/d/1Ds03yxhl2EPfPiv6a8C7gNNlecHYutlN/view?usp=sharing"
+                                target="_blank" rel="noopener" download="Emanuel Comas">CV — /Emanuel-Comas</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
