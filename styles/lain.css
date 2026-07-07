@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    background: black;
+    color: #00ffcc;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+img{
+    max-width: 150px;
+    margin-bottom: 20px;
+    filter: brightness(1.2) grayscale(100%);
+}
+
+a{
+    color: #00ffcc;
+    text-decoration: none;
+    border: 1px solid #00ffcc;
+    padding: 10px 30px;
+    display: inline-block;
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+a:hover{
+    background: #00ffcc;
+    color: black;
+}

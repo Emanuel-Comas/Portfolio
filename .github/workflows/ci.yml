@@ -1,0 +1,56 @@
+name: CI - Lint & Test
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+    
+jobs:
+    lint-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            # Clona el repo para trabajar con el codigo.
+            - name: Checkout repo
+              uses: actions/checkout@v3
+
+
+            # Instala node para poder usar npm y linters.
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+
+
+            # Instala las herramientas para validad html, css y js.
+            - name: Install linters
+              run: npm install htmlhint stylelint eslint
+
+
+            # Valida todos los html.
+            - name: Run HTMLHint (HTML validator)
+              run: npx htmlhint "**/*.html"
+
+
+            # Valida todos los css.
+            - name: Run Stylelint (CSS validator)
+              run: npx stylelint "**/*.css"
+
+
+            # Valida todos los js.
+            - name: Run ESlint (JS validator)
+              run: npx eslint "**/*.js"
+
+            - name: success message
+              if: success()
+              # Mensaje en consola su esta todo bien.
+              run: echo "All linters success."
+
+            - name: failure message
+              if: failure()
+              # Mensaje en consola por si falla algo.
+              run: echo "One or more linters failed, please check the logs."
+
+
